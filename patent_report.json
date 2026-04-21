@@ -1,0 +1,117 @@
+{
+  "total_patents": 100000,
+  "total_inventors": 92442,
+  "total_companies": 19025,
+  "top_inventors": [
+    {
+      "name": "Dong Min KANG",
+      "patent_count": 2
+    },
+    {
+      "name": "\u00d6rjan Ahlgren",
+      "patent_count": 1
+    },
+    {
+      "name": "Zuzana Kossaczka",
+      "patent_count": 1
+    },
+    {
+      "name": "Zunqing He",
+      "patent_count": 1
+    },
+    {
+      "name": "Zhouyue Pi",
+      "patent_count": 1
+    },
+    {
+      "name": "Zhibiao Zhao",
+      "patent_count": 1
+    },
+    {
+      "name": "Zhenyu Li",
+      "patent_count": 1
+    },
+    {
+      "name": "Yuya Nishikawa",
+      "patent_count": 1
+    },
+    {
+      "name": "Yutaka Mizuno",
+      "patent_count": 1
+    },
+    {
+      "name": "Yutaka Miki",
+      "patent_count": 1
+    }
+  ],
+  "top_companies": [
+    {
+      "name": 0,
+      "patent_count": 537
+    },
+    {
+      "name": 1,
+      "patent_count": 36
+    },
+    {
+      "name": 2,
+      "patent_count": 5
+    },
+    {
+      "name": 6,
+      "patent_count": 1
+    },
+    {
+      "name": 3,
+      "patent_count": 1
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "US",
+      "patent_count": 255
+    },
+    {
+      "country": "JP",
+      "patent_count": 109
+    },
+    {
+      "country": "KR",
+      "patent_count": 37
+    },
+    {
+      "country": "DE",
+      "patent_count": 35
+    },
+    {
+      "country": "CN",
+      "patent_count": 33
+    },
+    {
+      "country": "TW",
+      "patent_count": 13
+    },
+    {
+      "country": "GB",
+      "patent_count": 13
+    },
+    {
+      "country": "FR",
+      "patent_count": 10
+    },
+    {
+      "country": "CH",
+      "patent_count": 9
+    },
+    {
+      "country": "CA",
+      "patent_count": 9
+    }
+  ],
+  "yearly_trends": [
+    {
+      "year": 2018,
+      "patent_count": 100000
+    }
+  ]
+}

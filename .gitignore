@@ -1,0 +1,7 @@
+patent_env/
+__pycache__/
+*.pyc
+data/
+*.tsv
+*.zip
+patent_database.db
