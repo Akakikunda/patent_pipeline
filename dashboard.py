@@ -48,16 +48,11 @@ def load_all_data():
 
 patents, inventors, companies, top_inventors, top_companies, country_trends, yearly = load_all_data()
 
-# ============================================
-# HEADER SECTION
-# ============================================
 st.title(" Patent Data Analytics Dashboard")
 st.markdown("*Comprehensive Analysis of Global Patent Activity*")
 st.markdown("---")
 
-# ============================================
-# KEY METRICS ROW
-# ============================================
+
 st.subheader(" Key Metrics Overview")
 
 col1, col2, col3, col4, col5 = st.columns(5)
@@ -77,17 +72,13 @@ with col5:
 
 st.markdown("---")
 
-# ============================================
-# TABBED INTERFACE FOR ORGANIZED VISUALIZATIONS
-# ============================================
+
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     " Trends", " Top Performers", " Geographic", 
     " Relationships", " Distributions", " SQL Queries"
 ])
 
-# ============================================
-# TAB 1: TRENDS OVER TIME
-# ============================================
+
 with tab1:
     st.header(" Patent Trends Over Time")
     
@@ -127,9 +118,7 @@ with tab1:
         fig3.update_layout(height=400)
         st.plotly_chart(fig3, use_container_width=True)
 
-# ============================================
-# TAB 2: TOP PERFORMERS
-# ============================================
+
 with tab2:
     st.header(" Top Performers Analysis")
     
@@ -193,9 +182,6 @@ with tab2:
                          color_discrete_sequence=['#45B7D1', '#96CEB4'])
             st.plotly_chart(fig7, use_container_width=True)
 
-# ============================================
-# TAB 3: GEOGRAPHIC ANALYSIS
-# ============================================
 with tab3:
     st.header(" Geographic Distribution of Patents")
     
@@ -238,9 +224,7 @@ with tab3:
         fig10.update_layout(height=500)
         st.plotly_chart(fig10, use_container_width=True)
 
-# ============================================
-# TAB 4: RELATIONSHIPS & NETWORKS
-# ============================================
+
 with tab4:
     st.header(" Patent-Inventor-Company Relationships")
     
@@ -271,9 +255,7 @@ with tab4:
         fig11.update_layout(height=500)
         st.plotly_chart(fig11, use_container_width=True)
 
-# ============================================
-# TAB 5: DISTRIBUTIONS
-# ============================================
+
 with tab5:
     st.header(" Statistical Distributions")
     
@@ -318,9 +300,7 @@ with tab5:
         fig15.update_layout(height=400)
         st.plotly_chart(fig15, use_container_width=True)
 
-# ============================================
-# TAB 6: SQL QUERY RESULTS
-# ============================================
+
 with tab6:
     st.header(" 7 Required SQL Query Results")
     
@@ -366,9 +346,7 @@ with tab6:
         ranking_sample['rank'] = range(1, len(ranking_sample) + 1)
         st.dataframe(ranking_sample[['name', 'patent_count', 'rank']], use_container_width=True)
 
-# ============================================
-# FOOTER
-# ============================================
+
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center'>

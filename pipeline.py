@@ -16,9 +16,7 @@ print("=" * 70)
 
 DATA_FOLDER = "data/"
 
-# ============================================
-# STEP 1: LOAD ALL 6 FILES
-# ============================================
+
 print("\n[1/8] Loading 6 data files...")
 
 # File 1: g_patent.tsv
@@ -61,9 +59,7 @@ except:
     print("   ⚠ g_wipo_technology.tsv not found - skipping")
     wipo_available = False
 
-# ============================================
-# STEP 2: CLEAN DATA AND CREATE 4 TABLES
-# ============================================
+
 print("\n[2/8] Creating 4 database tables...")
 
 # ----- TABLE 1: patents -----
@@ -169,9 +165,7 @@ if 'patent_id' in assignees_raw.columns:
 relationships = relationships.drop_duplicates()
 print(f"   ✓ relationships table: {len(relationships):,} rows")
 
-# ============================================
-# STEP 3: SAVE CLEAN DATA FILES (REQUIREMENT)
-# ============================================
+
 print("\n[3/8] Saving clean data files...")
 
 patents_clean.to_csv('clean_patents.csv', index=False)
@@ -182,9 +176,7 @@ print("   ✓ clean_patents.csv")
 print("   ✓ clean_inventors.csv")
 print("   ✓ clean_companies.csv")
 
-# ============================================
-# STEP 4: CREATE SQL DATABASE (REQUIREMENT)
-# ============================================
+
 print("\n[4/8] Creating SQL database...")
 
 conn = sqlite3.connect('patent_database.db')
@@ -197,9 +189,7 @@ relationships.to_sql('patent_relationships', conn, if_exists='replace', index=Fa
 conn.close()
 print("   ✓ patent_database.db created with 4 tables")
 
-# ============================================
-# STEP 5: RUN 7 SQL QUERIES (REQUIREMENT)
-# ============================================
+
 print("\n[5/8] Running 7 SQL queries...")
 
 conn = sqlite3.connect('patent_database.db')
@@ -308,9 +298,7 @@ print(ranking_results.to_string(index=False))
 conn.close()
 print("\n   ✓ All 7 queries completed successfully")
 
-# ============================================
-# STEP 6: EXTRA CREDIT - CPC and WIPO Analysis
-# ============================================
+
 print("\n[6/8] Extra Credit: Technology Analysis")
 
 if cpc_available:
@@ -328,9 +316,7 @@ if wipo_available:
         wipo_analysis.to_csv('wipo_analysis.csv', index=False)
         print("   ✓ wipo_analysis.csv created")
 
-# ============================================
-# STEP 7: CONSOLE REPORT (REQUIREMENT)
-# ============================================
+
 print("\n" + "=" * 70)
 print("CONSOLE REPORT - PATENT ANALYSIS")
 print("=" * 70)
@@ -351,9 +337,7 @@ if len(yearly_trends) > 0:
         print(f"   {int(row['year'])}: {int(row['patent_count']):,} patents")
 print("=" * 70)
 
-# ============================================
-# STEP 8: JSON REPORT (REQUIREMENT)
-# ============================================
+
 print("\n[7/8] Creating JSON report...")
 
 json_report = {
@@ -370,9 +354,7 @@ with open('patent_report.json', 'w') as f:
     json.dump(json_report, f, indent=2)
 print("   ✓ patent_report.json")
 
-# ============================================
-# STEP 9: CREATE SCHEMA.SQL (REQUIREMENT)
-# ============================================
+
 print("\n[8/8] Creating schema.sql...")
 
 schema_sql = """-- ============================================
@@ -496,9 +478,7 @@ with open('schema.sql', 'w') as f:
     f.write(schema_sql)
 print("   ✓ schema.sql")
 
-# ============================================
-# COMPLETION
-# ============================================
+
 print("\n" + "=" * 70)
 print("✅ PIPELINE COMPLETED SUCCESSFULLY!")
 print("=" * 70)
