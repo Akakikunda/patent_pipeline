@@ -4,7 +4,7 @@
 https://github.com/Akakikunda/patent_pipeline
 
 ## Live Dashboard
-https://akakikunda-patent-pipeline.streamlit.app
+https://patentpipeline-tzappuglgg48y4punnnvwr.streamlit.app
 
 ## Project Requirements Met
 - SQL database with 4 tables (patents, inventors, companies, relationships)
